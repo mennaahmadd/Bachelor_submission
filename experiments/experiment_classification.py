@@ -297,7 +297,7 @@ class MultiSectionPredictionTask(torch.nn.Module):
 
 class CCSA(torch.nn.Module):
 
-    def __init__(self, margin=0.5):
+    def __init__(self, margin=2.0): #0.5
         super().__init__()
         self.margin = margin
 

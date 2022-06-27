@@ -13,7 +13,7 @@ class MelSpectrogram(torch.nn.Module):
             sampling_rate=16000,
             hop_length=512,
             n_fft=1024,
-            n_mels=128,
+            n_mels=32, #128
             consistent_with_librosa=False,
             **kwargs
     ):
@@ -40,7 +40,7 @@ class MelSpectrogram(torch.nn.Module):
     def add_model_specific_args(parent_parser, **defaults):
 
         parser = ArgumentParser(parents=[parent_parser], add_help=False)
-        parser.add_argument('--n_mels', type=int, default=defaults.get('n_mels', 128))
+        parser.add_argument('--n_mels', type=int, default=defaults.get('n_mels', 32)) #It was 128
         parser.add_argument('--n_fft', type=int, default=defaults.get('n_fft', 1024))
         parser.add_argument('--hop_length', type=int, default=defaults.get('hop_length', 512))
         parser.add_argument('--sampling_rate', type=int, default=defaults.get('sampling_rate', 16000))

@@ -19,7 +19,7 @@ if __name__ == "__main__":
     parser.add_argument('--run_id', type=str, default=None)
     parser.add_argument('--data_module', type=str, default='mcm')
     parser.add_argument('--feature_extractor', type=str, default='mel_spectrogram')
-    parser.add_argument('--data_root', type=str, default=os.path.join(os.path.expanduser('~'), 'shared', 'DCASE2021', 'task2'))
+    parser.add_argument('--data_root', type=str, default=os.path.join(os.path.expanduser('C:\\Users\\Mahmoud'), 'shared', 'DCASE2021','task2'))  # NEW PATH
     parser.add_argument('--log_root', type=str, default=get_logging_root())
 
     # args for trainer

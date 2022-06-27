@@ -17,7 +17,7 @@ class MCMDataModule(pl.LightningDataModule):
             section: int,
             data_root: str,
             batch_size: int = 16,
-            n_workers=4,
+            n_workers=0, # It was 4
             normalize_waveform = False,
             proxy_outliers='none',
             debug=False,
@@ -199,6 +199,6 @@ class MCMDataModule(pl.LightningDataModule):
         parser.set_defaults(pairwise_mixing=False)
         parser.add_argument('--normalize_waveform', dest='normalize_waveform', action='store_true')
         parser.set_defaults(normalize_waveform=False)
-        parser.add_argument('--n_workers', type=int, default=4)
+        parser.add_argument('--n_workers', type=int, default=0)
 
         return parser

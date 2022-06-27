@@ -7,15 +7,18 @@ import socket
 
 if socket.gethostname() in ['basil', 'chili'] + [f'rechenknecht{i}' for i in range(9)]:
     # set data root for paul's PCs
+   #  menna's PC data root
     BASE_PATH = os.path.join(os.path.expanduser('~'), 'shared', 'DCASE2021', 'task2')
     # TODO: add custom datapath here...
 else:
-    BASE_PATH = os.path.join(os.path.expanduser('~'), 'shared', 'DCASE2021', 'task2')
+    #MY NEW PATH
+    BASE_PATH = os.path.join(os.path.expanduser('C:\\Users\\Mahmoud'), 'shared', 'DCASE2021', 'task2')
+    print('Hai')
+    print(BASE_PATH)
 
 MACHINE_TYPES = ['fan', 'gearbox', 'pump', 'slider', 'ToyCar', 'ToyTrain', 'valve']
 NUM_SECTIONS = 6
 TEST_SECTIONS = [3, 4, 5]
-
 
 def get_machine_type(path):
     machine_type = os.path.split(os.path.split(os.path.split(path)[0])[0])[1]
